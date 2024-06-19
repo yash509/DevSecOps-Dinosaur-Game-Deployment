@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javascript-game-deployment
+  name: dinosaur-game-deployment
 spec:
   replicas: 2  # Number of desired replicas
   selector:
     matchLabels:
-      app: javascript-game
+      app: dinosaur-game
   template:
     metadata:
       labels:
-        app: javascript-game
+        app: dinosaur-game
     spec:
       containers:
-      - name: javascript-game
-        image: rameshkumarverma/javascript-game
+      - name: dinosaur-game
+        image: yash5090/dinosaur-game:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
