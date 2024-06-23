@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dinosaur-game-deployment
+  name: dinosaur-deployment
 spec:
   replicas: 2 # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: dinosaur-game
+      app: dinosaur
   template:
     metadata:
       labels:
-        app: dinosaur-game
+        app: dinosaur
     spec:
       containers:
-        - name: dinosaur-game
-          image: yash5090/dinosaur-game:latest # Replace with the actual image tag
+        - name: dinosaur
+          image: yash5090/dinosaur:latest # Replace with the actual image tag
           ports:
             - containerPort: 5000 # Replace with the port your Tetris game listens on
